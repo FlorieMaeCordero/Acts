@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html>
+    <head> 
+        <title>XML Demonstration</title> 
+    </head>
+    <body> 
+        <h2>Displaying titles of CD Catalog </h2>
+        <div id = "demo">
+            <button type = "button" onclick= "loadXMLDoc()">Load XML File</button>
+
+        </div>
+        <script>
+            function loadXMLDoc() {
+                var xhttp = new XMLHttpRequest();
+                xhttp.open("GET", "catalog.xml", true);
+                xhttp.send();
+
+                xhttp.onreadystatechange = function() {                   
+                        myFunction(this);
+                    }
+                };
+            
+
+            function myFunction(xml) {
+                var receiver, idx, xmlDoc, txt;
+                var xmlDoc = xml.responseXML;
+                receiver = xmlDoc.getElementsByTagName("TITLE");
+                var txt = "";
+
+                for (var idx = 0; idx < receiver.length; idx++) {
+                    txt += receiver[idx].childNodes[0].nodeValue + "<br>";
+                }
+
+                document.getElementById("demo").innerHTML = txt;
+            }
+        </script>
+    </body>
+</html>

@@ -1,0 +1,20 @@
+<library>
+ <book>
+  <title>Harry Potter and the Philospher's Stone</title>
+  <author>J.K Rowling</author>
+  <publication_date>1997</publication_date>
+</book> 
+
+ <book>
+  <title>To Kill a Mockingbird</title>
+  <author>harper Lee</author>
+  <publication_date>1960</publication_date>
+</book> 
+
+ <book>
+  <title>The Great Gastby</title>
+  <author>F. Scott Fritzgerald</author>
+  <publication_date>1925</publication_date>
+</book> 
+
+</library>
